@@ -7,7 +7,9 @@ const Nav = () => {
         <nav className="header">
             <div className="logo">
                 <Link to = "/">
-                    Fake Store
+                    <div className="logo-text">
+                        Fake Store
+                    </div>
                 </Link>
             </div>
             <div className="links">

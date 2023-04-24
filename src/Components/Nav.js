@@ -21,7 +21,7 @@ const Nav = () => {
                         <li>Contact</li>
                     </Link>                   
                     <Link to = "">
-                        <li>Cart</li>
+                        <li><i class='bx bx-cart-alt' ></i></li>
                     </Link>
                 </ul>
             </div>

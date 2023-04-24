@@ -8,7 +8,9 @@ import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">       
+      <div className="App"> 
+      <div className="img-overlay"></div>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>      
           <Nav />
           <div className="content">
           <Routes>

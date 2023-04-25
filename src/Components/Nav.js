@@ -20,7 +20,7 @@ const Nav = () => {
                     <Link to = "/contact">
                         <li>Contact</li>
                     </Link>                   
-                    <Link to = "">
+                    <Link to = "/cart">
                         <li><i class='bx bx-cart-alt' ></i></li>
                     </Link>
                 </ul>

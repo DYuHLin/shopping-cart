@@ -3,6 +3,8 @@ import Nav from "./Components/Nav";
 import "./Style/style.css";
 import Shop from "./Components/Shop";
 import Contact from "./Components/Contact";
+import Cart from "./Components/Cart";
+import ItemPage from "./Components/ItemPage";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 
 function App() {
@@ -14,9 +16,11 @@ function App() {
           <Nav />
           <div className="content">
           <Routes>
-              <Route path="/shop" Component={Shop} />
+              <Route path="/shop/:id" Component={ItemPage} />
               <Route path="/contact" Component={Contact} />
-              <Route path="/" exact Component={homePage} />
+              <Route path="/cart" Component={Cart} />
+              <Route path="/shop" Component={Shop} />
+              <Route path="/" Component={homePage} />
             </Routes>
           </div>
       </div>
@@ -44,7 +48,7 @@ const homePage = () => {
 
       <div className="right">
         <div className="home-Image">
-          <img className="home-pic" src = {`./img/homePic.jpg`} />
+          <img className="home-pic" src = {`./img/homePic.jpg`} alt="fashionable people"/>
         </div>
       </div>
     </div>

@@ -207,7 +207,7 @@ i:hover{
 
 .items{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .card{
@@ -220,6 +220,11 @@ i:hover{
     border-radius: 8px;
     padding: 28px;
     margin: 20px;
+    transition: all 0.3s ease-in;
+}
+
+.card:hover{
+    transform: scale(1.1);
 }
 
 .product-image{
@@ -238,6 +243,14 @@ i:hover{
     font-weight: 300;
     font-size: 18px;
     color: black;
+    margin-bottom: 18px;
+}
+
+.product-desc{
+    font-weight: 200;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 18px;
 }
 
 .product-price{

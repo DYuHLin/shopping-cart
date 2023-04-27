@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../CartContext";
+import { useContext } from "react";
 
 const Nav = () => {
+
+    const { items } = useContext(CartContext);
 
     return (
         <nav className="header">
@@ -21,7 +25,7 @@ const Nav = () => {
                         <li>Contact</li>
                     </Link>                   
                     <Link to = "/cart">
-                        <li><i class='bx bx-cart-alt' ></i></li>
+                        <li><i class='bx bx-cart-alt' ></i> {items.length}</li>
                     </Link>
                 </ul>
             </div>

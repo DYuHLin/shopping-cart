@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Nav from "./Components/Nav";
 import "./Style/style.css";
 import Shop from "./Components/Shop";
@@ -6,25 +6,30 @@ import Contact from "./Components/Contact";
 import Cart from "./Components/Cart";
 import ItemPage from "./Components/ItemPage";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
+import { CartProvider } from "./CartContext";
 
 function App() {
+
   return (
     <Router>
       <div className="App"> 
       <div className="img-overlay"></div>
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>      
+      <CartProvider>
           <Nav />
           <div className="content">
           <Routes>
-              <Route path="/shop/:id" Component={ItemPage} />
+              <Route path="/shop/:id"  element={<ItemPage/>} />
               <Route path="/contact" Component={Contact} />
               <Route path="/cart" Component={Cart} />
               <Route path="/shop" Component={Shop} />
               <Route path="/" Component={homePage} />
             </Routes>
           </div>
+        </CartProvider>
       </div>
     </Router>
+
   );
 }
 

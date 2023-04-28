@@ -7,14 +7,11 @@ export function CartProvider({children}){
 
     const addToCart = (obj) => {
         if(items.includes(obj)){
-            let newItems = items;
-            newItems[obj.id].quantity = newItems[obj.id].quantity +1;
-            setItems(newItems);
-            console.log(items);
-        } else {
-            setItems((prevItems) => [...prevItems, obj]);
-            console.log(items);
+            return;
         };
+        
+        setItems((prevItems) => [...prevItems, obj]);
+        console.log(items);
     };
 
     return(

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import CartContext from "../CartContext";
 
 function Cart() {
-  const {items} = useContext(CartContext);
+  const {items, deleteCart, incQuantity, decQuantity} = useContext(CartContext);
   return (
       <div className="cartPage">
         <div className="title">
@@ -24,10 +24,10 @@ function Cart() {
               </div>
              
              <div className="tasks"> 
-             <button className="delete-cart">Remove</button>
+             <button onClick={() => deleteCart(item.id)} className="delete-cart">Remove</button>
              <div className="plus-minus">
-              <button className="inc">+</button>
-              <button className="dec">-</button>
+              <button onClick={() => incQuantity(item.id)} className="inc">+</button>
+              <button onClick={() => decQuantity(item.id)} className="dec">-</button>
              </div>
               <div className="cart-quantity">{item.quantity}</div>
              </div>

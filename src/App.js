@@ -5,7 +5,7 @@ import Shop from "./Components/Shop";
 import Contact from "./Components/Contact";
 import Cart from "./Components/Cart";
 import ItemPage from "./Components/ItemPage";
-import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
+import {HashRouter as Router, Link, Route, Routes} from "react-router-dom";
 import { CartProvider } from "./CartContext";
 
 function App() {

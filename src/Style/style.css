@@ -99,6 +99,7 @@ a{
     padding-right: 28px;
     margin-left: 32px;
     align-items: center;
+    justify-content: center;
     gap: 42px;
 }
 
@@ -111,6 +112,8 @@ a{
 .right{
     width: 50%;
     height: 60%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .home-Image{
@@ -125,6 +128,8 @@ a{
 }
 
 .sub{
+    display: flex;
+    justify-content: baseline;
     font-size: 26px;
     font-weight: 500;
     color: white;
@@ -303,6 +308,10 @@ i:hover{
     color: black;
 }
 
+.cart-price{
+    font-weight: 600;
+}
+
 .general{
     display: flex;
     flex-direction: row;
@@ -391,4 +400,52 @@ body::-webkit-scrollbar {
 
 .am{
     font-size: 18px;
+}
+
+@media (max-width: 1153px){
+    .items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px){
+    .items{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .social{
+        gap: 16px;
+    }
+
+    .location-name{
+        font-size: 18px;
+    }
+
+    i{
+        font-size: 80px;
+    }
+
+    .tasks{
+        display: flex;
+        gap: 30px;
+    }
+
+    .homePage{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 42px;
+    }
+}
+
+@media (max-width: 674px){
+    .tasks{
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
 }

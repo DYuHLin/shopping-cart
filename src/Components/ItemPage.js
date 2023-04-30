@@ -18,8 +18,11 @@ function ItemPage(props) {
       id: item.id,
       name: item.title,
       image: item.image,
+      description: item.description,
       price: item.price,
       quantity: 1,
+      multiplier: 2,
+      total: item.price 
     };
 
     setItem(newItem);

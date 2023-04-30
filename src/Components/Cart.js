@@ -3,7 +3,13 @@ import { useContext } from "react";
 import CartContext from "../CartContext";
 
 function Cart() {
-  const {items, deleteCart, incQuantity, decQuantity} = useContext(CartContext);
+  const {items, deleteCart, incQuantity, decQuantity, getTotal} = useContext(CartContext);
+
+  const total = () => {
+    return (items.quantity * items.price).toFixed(2);
+  };
+  const totalAmount = getTotal();
+
   return (
       <div className="cartPage">
         <div className="title">
@@ -19,21 +25,22 @@ function Cart() {
                 <div className="general">
                   <div><img className="cartIcon" src = {`${item.image}`} /></div>
                   <div className="cart-name">{item.name}</div>
-                  <div className="cart-price">{item.price}</div>
+                  <div className="cart-price">R{item.price}</div>
                 </div>
               </div>
              
              <div className="tasks"> 
              <button onClick={() => deleteCart(item.id)} className="delete-cart">Remove</button>
              <div className="plus-minus">
-              <button onClick={() => incQuantity(item.id)} className="inc">+</button>
-              <button onClick={() => decQuantity(item.id)} className="dec">-</button>
+              <button id="dec-btn" onClick={() => incQuantity(item.id)} className="inc">+</button>
+              <button  onClick={() => decQuantity(item.id)} className="dec">-</button>
              </div>
               <div className="cart-quantity">{item.quantity}</div>
              </div>
           </div>
           )
         })}
+        <div className="total">Total: R{totalAmount}</div>
         <button className="checkout">Checkout</button>
         </div>
       </div>

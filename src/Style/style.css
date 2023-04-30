@@ -281,6 +281,12 @@ i:hover{
     font-weight: 400;
 }
 
+.total{
+    color: black;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
 .delete-cart, .inc, .dec{
     color: black;
 }

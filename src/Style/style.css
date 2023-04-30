@@ -273,6 +273,10 @@ i:hover{
     background-color: rgb(240, 176, 57);
 }
 
+.dec:disabled{
+    background-color: rgb(160, 139, 100);
+}
+
 .dec{
     border: none;
     padding: 12px;

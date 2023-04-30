@@ -33,12 +33,13 @@ function Cart() {
              <button onClick={() => deleteCart(item.id)} className="delete-cart">Remove</button>
              <div className="plus-minus">
               <button id="dec-btn" onClick={() => incQuantity(item.id)} className="inc">+</button>
-              <button  onClick={() => decQuantity(item.id)} className="dec">-</button>
+              <button disabled = {item.quantity <= 1}  onClick={() => decQuantity(item.id)} className="dec">-</button>
              </div>
               <div className="cart-quantity">{item.quantity}</div>
              </div>
           </div>
           )
+          
         })}
         <div className="total">Total: R{totalAmount}</div>
         <button className="checkout">Checkout</button>

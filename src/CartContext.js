@@ -23,9 +23,7 @@ export function CartProvider({children}){
     const incQuantity = (index) => {
         const newArr = items.map((obj) => {
             if(index === obj.id){
-                return{...obj, quantity: obj.quantity + 1,
-                    multiplier: obj.multiplier + 1,
-                    total: obj.price * obj.multiplier}           
+                return{...obj, quantity: obj.quantity + 1}           
             } else {
                 return obj;
             };
@@ -39,17 +37,13 @@ export function CartProvider({children}){
             totalAmount += items[cart].price * items[cart].quantity;
         }
 
-        return totalAmount;
+        return totalAmount.toFixed(2);
     };
 
     const decQuantity = (index) => {
         const newArr = items.map((obj) => {
             if(index === obj.id){
-                return{...obj, quantity: obj.quantity - 1,
-                    multiplier: obj.multiplier - 1,}
-            } else if(index === obj.id && obj.quantity <= 1){
-                const decBtn = document.getElementById("dec-btn").disabled = true;
-                return obj;
+                return{...obj, quantity: obj.quantity - 1}
             } else {
                 return obj;
             };

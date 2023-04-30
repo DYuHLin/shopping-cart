@@ -21,7 +21,6 @@ function ItemPage(props) {
       description: item.description,
       price: item.price,
       quantity: 1,
-      multiplier: 2,
       total: item.price 
     };
 

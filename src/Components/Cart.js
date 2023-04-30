@@ -17,7 +17,7 @@ function Cart() {
         </div>
         
         <div className="cart">
-        {items.map((item) => {
+        {items.map((item, id) => {
           return(
             <div className="itemCard">
               <div className="show">
@@ -30,7 +30,7 @@ function Cart() {
               </div>
              
              <div className="tasks"> 
-             <button onClick={() => deleteCart(item.id)} className="delete-cart">Remove</button>
+             <button onClick={() => deleteCart(id)} className="delete-cart">Remove</button>
              <div className="plus-minus">
               <button id="dec-btn" onClick={() => incQuantity(item.id)} className="inc">+</button>
               <button disabled = {item.quantity <= 1}  onClick={() => decQuantity(item.id)} className="dec">-</button>

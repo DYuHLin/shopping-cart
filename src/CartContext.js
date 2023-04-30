@@ -6,13 +6,14 @@ export function CartProvider({children}){
     const [items, setItems] = useState([]);
 
     const addToCart = (obj) => {
-        if(items.includes(obj)){
-            return;
+        for(let i = 0; i < items.length; i++){
+            if(items[i].id === obj.id){
+                return;
+            }
         }
-
         setItems((prevItems) => [...prevItems, obj]);
-        
-    };
+        };
+
     console.log(items);
     const deleteCart = (index) => {
         setItems(oldValues => {

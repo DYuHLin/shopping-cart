@@ -25,7 +25,7 @@ const Nav = () => {
                         <li>Contact</li>
                     </Link>                   
                     <Link to = "/cart">
-                        <li><i class='bx bx-cart-alt' ></i> {items.length}</li>
+                        <li><i class='bx bx-cart-alt'><span className="am">{items.length}</span></i></li>
                     </Link>
                 </ul>
             </div>

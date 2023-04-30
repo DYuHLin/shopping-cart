@@ -71,12 +71,11 @@ li{
 
 .bx-cart-alt{
     font-size: 28px;
-    background-color: black;
-    padding: 12px;
+    padding: 1px;
     border-radius: 50%;
 }
 
-li:hover, .bx-cart-alt{
+li:hover, .bx-cart-alt:hover{
     transform: translateY(-7%);
 }
 
@@ -322,10 +321,11 @@ i:hover{
     padding: 28px;
     margin: 20px;
     transition: all 0.3s ease-in;
+    animation:transitionSlow 0.8s;
 }
 
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 .product-image{
@@ -383,3 +383,12 @@ body::-webkit-scrollbar {
     background-color: darkgrey;
     border-radius: 7px;
   }
+
+.bx-cart-alt{
+    display: flex;
+    align-items: center;
+}
+
+.am{
+    font-size: 18px;
+}

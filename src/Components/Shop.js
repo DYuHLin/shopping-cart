@@ -16,7 +16,6 @@ function Shop() {
     fetchItems();
   },[]);
 
-  console.log(items);
   return (
       <div className="shopPage">
           <div className="title">Shop Page</div>

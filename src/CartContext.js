@@ -14,7 +14,6 @@ export function CartProvider({children}){
         setItems((prevItems) => [...prevItems, obj]);
         };
 
-    console.log(items);
     const deleteCart = (index) => {
         setItems(oldValues => {
             return oldValues.filter(exp => exp.id !== index)
